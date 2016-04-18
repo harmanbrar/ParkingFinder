@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+>   <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="55dp"
+        sothree:umanoShadowHeight="4dp"
+        sothree:umanoOverlay="true">
+
+        <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:id="@+id/map"
+            tools:context="com.matthias.parkingfinder.MapsActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="false"
+            android:id="@+id/dragView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="horizontal"
+                android:id="@+id/filterOptions">
+
+                <Button
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:text="$"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"/>
+                <Button
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:text="Time"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"/>
+
+                <Button
+                    android:id="@+id/clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:text="Clear"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"/>
+
+                <Button
+                    android:id="@+id/list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:text="List"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:onClick = "List"/>
+            </LinearLayout>
+            <!--END OF FILTER ROW -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price:"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:paddingLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/pricehr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Price/hr"
+                    android:textColorHint="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:paddingLeft="30dp"/>
+
+                <EditText
+                    android:id="@+id/flatrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Flat Rate"
+                    android:textColorHint="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:paddingLeft="30dp"/>
+
+            </LinearLayout>
+            <!-- END OF PRICE FILTER ROW -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time:"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:paddingLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/starttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Start Time"
+                    android:textColorHint="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:inputType="number"
+                    android:paddingLeft="30dp"/>
+
+                <EditText
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Duration"
+                    android:textColorHint="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:inputType="number"
+                    android:paddingLeft="30dp"/>
+
+            </LinearLayout>
+            <!-- END OF TIME FILTER ROW -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distance:"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:paddingLeft="10dp"/>
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/distanceSeek"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+            <!-- END OF DISTANCE FILTER ROW -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type:"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"/>
+
+                <CheckBox android:id="@+id/checkbox_lot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lot"
+                    android:textColor="#FFFFFF"
+                    android:onClick="onCheckboxClicked"/>
+
+                <CheckBox android:id="@+id/checkbox_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Street"
+                    android:textColor="#FFFFFF"
+                    android:onClick="onCheckboxClicked"/>
+
+                <CheckBox android:id="@+id/checkbox_parkade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parkade"
+                    android:textColor="#FFFFFF"
+                    android:onClick="onCheckboxClicked"/>
+            </LinearLayout>
+            <!-- END OF TYPE FILTER ROW -->
+
+        </LinearLayout>
+        <!-- END OF MENU -->
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+</LinearLayout>
+
+

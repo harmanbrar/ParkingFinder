@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="horizontal"
+			  android:gravity="center_vertical">
+
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="0.9"
+		android:gravity="center_vertical"
+		android:id="@+id/linearLayout_ParkingListItem_itemDetailLinearLayout">
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dp"
+			android:id="@+id/imageView_ParkingListItem_thumbnail"
+			android:src="@mipmap/ic_thumbnail_parkade_default"/>
+
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="250dp"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:text="Foo&apos;s Parking XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+				android:id="@+id/textView_ParkingListItem_name"
+				android:singleLine="true"
+				android:ellipsize="marquee"
+				android:marqueeRepeatLimit="marquee_forever"
+				android:scrollHorizontally="true"
+				android:focusable="true"
+				android:focusableInTouchMode="true"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:text="123 Fake Street XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+				android:id="@+id/textView_ParkingListItem_address"
+				android:singleLine="true"
+				android:ellipsize="marquee"
+				android:marqueeRepeatLimit="marquee_forever"
+				android:scrollHorizontally="true"
+				android:focusable="true"
+				android:focusableInTouchMode="true"/>
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+				<TextView
+					android:layout_width="80dp"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:text="XXX.Ykm"
+					android:id="@+id/textView_ParkingListItem_distanceInKM"/>
+				<TextView
+					android:layout_width="100dp"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:text="XXH YYM"
+					android:id="@+id/textView_ParkingListItem_distanceInTime"
+					android:ellipsize="marquee"
+					android:marqueeRepeatLimit="marquee_forever"
+					android:scrollHorizontally="true"
+					android:focusable="true"
+					android:focusableInTouchMode="true"/>
+				<TextView
+					android:layout_width="110dp"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:text="$XX.Y / HR"
+					android:id="@+id/textView_ParkingListItem_price"
+					android:ellipsize="marquee"
+					android:marqueeRepeatLimit="marquee_forever"
+					android:scrollHorizontally="true"
+					android:focusable="true"
+					android:focusableInTouchMode="true"/>
+			</LinearLayout>
+
+		</LinearLayout>
+	</LinearLayout>
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/imageView_ParkingListItem_navigation"
+		android:background="@mipmap/ic_navigation"
+		android:layout_weight="0.1"/>
+
+</LinearLayout>

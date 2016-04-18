@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Parking List"
+                android:id="@+id/textView_ParkingList_title"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Arrange By XXX ▾"
+                        android:id="@+id/textView_ParkingList_arrangeBy"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="A-/Descend ▾"
+                        android:id="@+id/textView_ParkingList_sortOrder"/>
+
+        </LinearLayout>
+
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.00"
+                android:scrollbars="vertical"
+                android:id="@+id/listView_ParkingList_parkingList" />
+</LinearLayout>
